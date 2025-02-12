@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title><%= catName %></title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+  <h1><%= catName %></h1>
+  <table>
+    <thead>
+        <th>Rating</th>
+        <th>Dish</th>
+        <th>Details</th>
+        <th>Price</th>
+    </thead>
+    <% menuItems.forEach(f => { %>
+        <tr>
+            <td><%= f.rating %></td>
+            <td><%= f.name %></td>
+            <td><%= f.details %></td>
+            <td>$<%= f.price %></td>
+        </tr>
+    <% }); %>
+    </table>
+</body>
+</html>
